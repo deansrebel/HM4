@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class MagicNumbers : MonoBehaviour
 {
@@ -8,6 +10,9 @@ public class MagicNumbers : MonoBehaviour
 
     [SerializeField] private int _max = 1000;
     [SerializeField] private int _min = 500;
+    [SerializeField] private TextMeshProUGUI startText;
+    [SerializeField] private TextMeshProUGUI finishText;
+    [SerializeField] private TextMeshProUGUI guessText;
 
     private int _guess;
     private int _guessCount;
@@ -18,7 +23,7 @@ public class MagicNumbers : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log($"Привет! Я Magic Numbers. Загадай число от {_min} до {_max}");
+        startText.text = "Привет! Я Magic Numbers. Загадай число от {_min} до {_max}";
 
         CalculateGuessAndLog();
     }
@@ -39,7 +44,7 @@ public class MagicNumbers : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log($"Ура! Твое число отгадано и равно {_guess}! Число затраченных ходов: {_guessCount}.");
+            finishText.text = "Ура! Твое число отгадано и равно {_guess}! Число затраченных ходов: {_guessCount}.";
             Start();
         }
     }
@@ -52,7 +57,7 @@ public class MagicNumbers : MonoBehaviour
     {
         _guess = (_max + _min) / 2;
         _guessCount++;
-        Debug.Log($"Твое число равно: {_guess}?");
+        guessText.text ="Твое число равно: {_guess}?";
     }
 
     #endregion
