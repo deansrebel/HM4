@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine;
 
 public class MagicNumbers : MonoBehaviour
 {
@@ -23,7 +20,7 @@ public class MagicNumbers : MonoBehaviour
 
     private void Start()
     {
-        startText.text = "Привет! Я Magic Numbers. Загадай число от {_min} до {_max}";
+        startText.text = $"Привет! Я Magic Numbers. Загадай число от '{_min}' до '{_max}'";
 
         CalculateGuessAndLog();
     }
@@ -57,7 +54,7 @@ public class MagicNumbers : MonoBehaviour
     {
         _guess = (_max + _min) / 2;
         _guessCount++;
-        guessText.text ="Твое число равно: {_guess}?";
+        guessText.text = "Твое число равно: {_guess}?";
     }
 
     #endregion
