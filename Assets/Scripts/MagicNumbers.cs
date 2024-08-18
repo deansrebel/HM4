@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MagicNumbers : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class MagicNumbers : MonoBehaviour
     [SerializeField] private TextMeshProUGUI finishText;
     [SerializeField] private TextMeshProUGUI guessText;
 
+    [SerializeField] private Button _higherButton;
+    [SerializeField] private Button _lowerButton;
+    [SerializeField] private Button _correctButton;
+
     private int _guess;
     private int _guessCount;
 
@@ -20,6 +25,7 @@ public class MagicNumbers : MonoBehaviour
 
     private void Start()
     {
+        _higherButton.onClick.AddListener(() => CalculateGuessAndLog());
         startText.text = $"Привет! Я Magic Numbers. Загадай число от '{_min}' до '{_max}'";
 
         CalculateGuessAndLog();
