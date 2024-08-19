@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 511179665}
   - component: {fileID: 511179664}
   m_Layer: 5
-  m_Name: Button - Start Game (1)
+  m_Name: Button - Exit Game
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -902,7 +902,6 @@ GameObject:
   - component: {fileID: 1081597532}
   - component: {fileID: 1081597531}
   - component: {fileID: 1081597530}
-  - component: {fileID: 1081597529}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -910,26 +909,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1081597529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1081597528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1ecaf90e97f52240b170319e2d033ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _max: 1000
-  _min: 500
-  startText: {fileID: 710396635}
-  finishText: {fileID: 0}
-  guessText: {fileID: 0}
-  _higherButton: {fileID: 0}
-  _lowerButton: {fileID: 0}
-  _correctButton: {fileID: 0}
 --- !u!114 &1081597530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1129,104 +1108,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1799157812
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1799157814}
-  - component: {fileID: 1799157813}
-  m_Layer: 0
-  m_Name: MagicNumbers
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1799157813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1799157812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1ecaf90e97f52240b170319e2d033ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _max: 1000
-  _min: 500
-  startText: {fileID: 0}
-  finishText: {fileID: 0}
-  guessText: {fileID: 0}
-  _higherButton: {fileID: 0}
-  _lowerButton: {fileID: 0}
-  _correctButton: {fileID: 0}
---- !u!4 &1799157814
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1799157812}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1876186281
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1876186282}
-  - component: {fileID: 1876186283}
-  m_Layer: 0
-  m_Name: SecondAndBroken
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1876186282
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1876186281}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1876186283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1876186281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66ac00b09ce13df40a198989f58b0d09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _max: 9
-  _min: 1
 --- !u!1 &2009338797
 GameObject:
   m_ObjectHideFlags: 0
@@ -1366,8 +1247,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
-  - {fileID: 1799157814}
-  - {fileID: 1876186282}
   - {fileID: 1081597533}
   - {fileID: 1623575082}
   - {fileID: 1768593968}

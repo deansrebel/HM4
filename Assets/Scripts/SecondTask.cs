@@ -30,6 +30,13 @@ public class NewBehaviourScript : MonoBehaviour
             }
         }
 
+        if (_sum >= _goal)
+        {
+            Debug.Log($"Сумма: {_goal}");
+            Debug.Log($"Игра окончена! Количество ходов: {_guess}");
+            Start();
+        }
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Start();
@@ -45,13 +52,6 @@ public class NewBehaviourScript : MonoBehaviour
         _sum += number;
         _guess++;
         Debug.Log($"Сумма: {_sum}");
-
-        if (_sum >= _goal)
-        {
-            Debug.Log($"Сумма: {_goal}");
-            Debug.Log($"Игра окончена! Количество ходов: {_guess}");
-            Start();
-        }
     }
 
     #endregion

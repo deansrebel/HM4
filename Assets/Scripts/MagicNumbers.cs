@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MagicNumbers : MonoBehaviour
@@ -8,16 +9,21 @@ public class MagicNumbers : MonoBehaviour
 
     [SerializeField] private int _max = 1000;
     [SerializeField] private int _min = 500;
-    [SerializeField] private TextMeshProUGUI startText;
-    [SerializeField] private TextMeshProUGUI finishText;
-    [SerializeField] private TextMeshProUGUI guessText;
+    [SerializeField] private TextMeshProUGUI _taskText;
+
+    [SerializeField] private TextMeshProUGUI _guessText;
 
     [SerializeField] private Button _higherButton;
     [SerializeField] private Button _lowerButton;
     [SerializeField] private Button _correctButton;
 
-    private int _guess;
-    private int _guessCount;
+    public static int _guess;
+
+    #endregion
+
+    #region Properties
+
+    public static int GuessCount { get; private set; }
 
     #endregion
 
@@ -25,31 +31,11 @@ public class MagicNumbers : MonoBehaviour
 
     private void Start()
     {
-        _higherButton.onClick.AddListener(() => CalculateGuessAndLog());
-        startText.text = $"Привет! Я Magic Numbers. Загадай число от '{_min}' до '{_max}'";
-
-        CalculateGuessAndLog();
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            _max = _guess;
-            CalculateGuessAndLog();
-        }
-
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            _min = _guess;
-            CalculateGuessAndLog();
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            finishText.text = "Ура! Твое число отгадано и равно {_guess}! Число затраченных ходов: {_guessCount}.";
-            Start();
-        }
+        StartGame();
+        _lowerButton.onClick.AddListener(LowNumber);
+        _higherButton.onClick.AddListener(HighNumber);
+        _correctButton.onClick.AddListener(CorrectAnswer);
+        GuessCount = 0;
     }
 
     #endregion
@@ -59,8 +45,31 @@ public class MagicNumbers : MonoBehaviour
     private void CalculateGuessAndLog()
     {
         _guess = (_max + _min) / 2;
-        _guessCount++;
-        guessText.text = "Твое число равно: {_guess}?";
+        GuessCount++;
+        _guessText.text = $"Твое число равно: {_guess}?";
+    }
+
+    private void CorrectAnswer()
+    {
+        SceneManager.LoadScene("WinScene");
+    }
+
+    private void HighNumber()
+    {
+        _min = _guess;
+        CalculateGuessAndLog();
+    }
+
+    private void LowNumber()
+    {
+        _max = _guess;
+        CalculateGuessAndLog();
+    }
+
+    private void StartGame()
+    {
+        _taskText.text = $"Привет! Я Magic Numbers. Загадай число от {_min} до {_max}";
+        CalculateGuessAndLog();
     }
 
     #endregion

@@ -274,6 +274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _startButton: {fileID: 730636377}
   _exitButton: {fileID: 184616211}
+  _startText: {fileID: 710396635}
 --- !u!4 &489753405
 Transform:
   m_ObjectHideFlags: 0
@@ -555,8 +556,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 62
-  m_fontSizeBase: 62
+  m_fontSize: 55
+  m_fontSizeBase: 55
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -759,7 +760,7 @@ RectTransform:
   - {fileID: 710396634}
   m_Father: {fileID: 1081597533}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.1, y: 0.7}
+  m_AnchorMin: {x: 0.1, y: 0.65}
   m_AnchorMax: {x: 0.9, y: 0.94}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
@@ -814,7 +815,6 @@ GameObject:
   - component: {fileID: 1081597532}
   - component: {fileID: 1081597531}
   - component: {fileID: 1081597530}
-  - component: {fileID: 1081597529}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -822,26 +822,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1081597529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1081597528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1ecaf90e97f52240b170319e2d033ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _max: 1000
-  _min: 500
-  startText: {fileID: 710396635}
-  finishText: {fileID: 0}
-  guessText: {fileID: 0}
-  _higherButton: {fileID: 0}
-  _lowerButton: {fileID: 0}
-  _correctButton: {fileID: 0}
 --- !u!114 &1081597530
 MonoBehaviour:
   m_ObjectHideFlags: 0
